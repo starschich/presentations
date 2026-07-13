@@ -1,0 +1,58 @@
+% =============================================================
+%  American Terawatt — Beamer Presentation (main file)
+%  Brand basis: americanterawatt.com
+%
+%  Structure:
+%    presentation.tex          <- this file: metadata + orchestration
+%    theme/atstyle.sty         <- template: palette, theme, commands
+%    chapters/*.tex            <- one file per overview item
+%
+%  Compile (run twice for nav/refs):
+%    pdflatex presentation.tex
+%    pdflatex presentation.tex
+% =============================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage{theme/atstyle}
+
+% ---- Document metadata --------------------------------------
+%\title{HVDC Configurations}
+%\subtitle{System Topologies}
+%\author{American Terawatt}
+
+\title{System Configuration}
+\subtitle{RTEi \& American Terawatt}
+\author{American Terawatt}
+\date{\today}
+\begin{document}
+
+% ---- Title slide --------------------------------------------
+\titleslide
+
+% ---- Overview (chapters listed below live in chapters/) -----
+%\begin{frame}{Overview}
+%  \begin{itemize}
+%    \setlength{\itemsep}{0.7em}
+%    \item System Configurations
+%    \item Multi-terminal HVDC, end to end
+%    \item HVDC Topologies
+%    \item Capacity roadmap
+%    \item Who we serve
+%    \item The team
+%  \end{itemize}
+%\end{frame}
+
+% ---- Chapters -----------------------------------------------
+%\input{chapters/01-transmission-bottleneck}
+%\input{chapters/02-multiterminal-hvdc}
+%\input{chapters/hvdc-topologies/hvdc-topologies}
+\input{chapters/system-configuration/system_overview}
+%\input{chapters/03-capacity-roadmap}
+%\input{chapters/04-who-we-serve}
+%s\input{chapters/05-the-team}
+
+% ---- Closing slide ------------------------------------------
+%\input{chapters/closing-slide.tex}
+
+
+
+\end{document}

@@ -1,0 +1,69 @@
+% =============================================================
+%  Chapter — HVDC Topologies
+%  Assets (SVG source + PDF build) live in this same subfolder.
+% =============================================================
+\sectionslide{HVDC Topologies}{Network architectures and pole configurations}
+
+
+% ---- Page 2: SVG left, bullet points right ------------------
+\begin{frame}{Monopole}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth]{chapters/hvdc-topologies/asmp}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \vspace{0.5em}
+      \begin{itemize}
+        \setlength{\itemsep}{0.7em}
+        \item \textbf{Two poles} --- independent positive and negative
+              conductors at $\pm525kV$.
+        \item \textbf{Redundancy} --- one pole keeps carrying power if the
+              other is out; capacity degrades gracefully.
+        \item \textbf{Return path} --- metallic or earth return handles
+              pole imbalance.
+        \item \textbf{Scales to multi-terminal} --- Poles tap into the shared DC backbone at each converter station.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---- Page 3: SVG left, bullet points right ------------------
+\begin{frame}{Symmetrical Monopole (SMP)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth]{chapters/hvdc-topologies/smp}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.7em}
+        \item \textbf{One pole} - Same positive and negative conductor
+        \item \textbf{Redundancy} - None, a failure in the converter or DC line causes the loss of complete transmission capacity.
+
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Bipole (BIP)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth]{chapters/hvdc-topologies/asmp}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \vspace{0.5em}
+      \begin{itemize}
+        \setlength{\itemsep}{0.7em}
+        \item \textbf{Two poles} - Independent positive and negative
+              conductors at $\pm525kV$.
+        \item \textbf{Redundancy} --- one pole keeps carrying power if the
+              other is out; capacity degrades gracefully.
+        \item \textbf{Return path} --- metallic or earth return handles
+              pole imbalance.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
