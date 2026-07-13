@@ -14,7 +14,7 @@
 *.dvi
 
 # Compiled main output (regenerated from source)
-/presentation.pdf
+#/presentation.pdf
 
 # Editor / OS
 .DS_Store
