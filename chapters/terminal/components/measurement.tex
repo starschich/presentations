@@ -1,0 +1,112 @@
+% =============================================================
+%  Measurement (Module 06, slides 18-23)
+% =============================================================
+\intermezzo{Measuring scheme}{Votlage and current transducers}
+
+\begin{frame}{Overview}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.60\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\cfig{image33}}
+      {\color{atGray}\footnotesize CIGR\'E 832 - Guide for Electromagnetic Transient Studies Involving VSC Converters}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.5em}
+        \item Current measurement
+        \item Voltage measurement
+      \end{itemize}
+      \vspace{0.4em}
+
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Measuring transducers}
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item Measure the analog voltage and current signals required for
+          monitoring and control of the HVDC system.
+    \item Located in the HV plant itself; usually convert the measured
+          signal to a level and form suitable for subsequent processing
+          ($<5$\,A, $<10$\,V).
+    \item Any major scaling of the measured signal is implemented on the
+          measurement device itself or on additional associated equipment.
+    \item Provide galvanic (electrical) isolation between the raw HV signals
+          and the clean environment of the control cubicles.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{AC voltage measurement}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      AC voltage measurement can be done by:
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Inductive Voltage Transformer
+        \item Capacitor Voltage Transformer (CVT)
+      \end{itemize}
+      \vspace{0.4em}
+
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cfig{image34}}
+      {\color{atGray}\footnotesize Fig. 6.6.3a -Typical line diagram of a capacitor voltage transformer. \textcopyright\ GE Vernova, 2023.}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{AC current measurement}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \textbf{AC current transformer}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Measuring principle usable for AC current measurements only.
+        \item Different insulators can be used: SF$_6$ or ``Clean Air''.
+        \item Lacks the capability to measure currents at low frequencies
+              ($<5$\,Hz).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cfig{image35}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{DC voltage measurement}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      Direct voltage on the HVDC busbar is measured by a DC resistive
+      Voltage Divider (VD).
+
+      \vspace{0.5em}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cfig{image36}}
+      {\color{atGray}\footnotesize DC Transmission Systems: Line Commutated Converters. \textcopyright\ GE Vernova, 2023.}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{DC current measurement}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \textbf{DC Current Transducer (DCCT)} used for DC current measurement:
+      \begin{itemize}
+        \setlength{\itemsep}{0.35em}
+        \item Zero Flux Current Transformers (ZFCT) or Optical Current Transformers (OCT)
+        \item Measurement accuracy of 0.2\% or better
+        \item Wide frequency range for very fast protection schemes
+        \item ZFCT installation over a bushing or cable
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cfig{image37}}
+    \end{column}
+  \end{columns}
+\end{frame}

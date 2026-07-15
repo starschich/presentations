@@ -1,0 +1,168 @@
+\intermezzo{Overvoltages}{}
+
+\begin{frame}{Overvoltages definition according to IEC}
+  \centering
+  \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\icfig{m07_image4}}
+\end{frame}
+
+\begin{frame}{Transient overvoltage in the AC grid}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\icfig{m07_image5}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.7\textheight,keepaspectratio]{\icfig{m07_image6}}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  {\centering\color{atGray}\footnotesize IEEE Std 1313.1-1996\par}
+\end{frame}
+
+\begin{frame}{Transient overvoltage in the AC grid}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.5em}
+        \item Overvoltages in the AC grid reflect the ``experience of the
+              world'', taking into account protective devices and methods of
+              overvoltage limitation.
+        \item For AC equipment other overvoltage levels can be specified,
+              e.g. transformers.
+      \end{itemize}
+      \vspace{0.3em}
+
+    \end{column}
+    \begin{column}{0.58\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image7}}
+      {\color{atGray}\footnotesize IEEE Std C57.12.00\texttrademark-2021}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Temporary overvoltage in the AC grid}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.5em}
+        \item Temporary overvoltages are defined by grid codes such as IEEE 2800, NERC PRC-024 or NERC PRC-029
+        \item Temporary overvoltages do not have an impact on the insulation coordination in the AC grid.
+      \end{itemize}
+      \vspace{0.3em}
+      {\color{atGray}\footnotesize PRC-024-3 --- Frequency and Voltage
+      Protection Settings for Generating Resources.}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image8}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Insulation strength}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      Insulation strength can be verified by:
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Testing in a high-voltage lab
+        \item Definition of air clearances
+      \end{itemize}
+      \vspace{0.3em}
+      {\color{atGray}\footnotesize www.highvolt.com}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.64\textheight,keepaspectratio]{\icfig{m07_image9}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Air clearances}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image11}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image12}}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  {\color{atGray}\footnotesize IEC 60071.}
+\end{frame}
+
+\begin{frame}{Environmental conditions}
+  Overvoltages apply for ``normal environmental conditions'' and ``standard
+  reference atmospheric conditions'' (IEC 60071-1, §5.9).
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{Normal environmental conditions}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item Temperature range $-40$\,\textdegree C\,/\,$+40$\,\textdegree C
+        \item Altitude $<1000$\,m
+        \item Ambient air not significantly polluted
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Standard reference atmosphere}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item Temperature: 20\,\textdegree C
+        \item Pressure: $p_0 = 1013$\,hPa
+        \item Absolute humidity: $h_0 = 11$\,g/m$^3$
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  {\color{atGray}\footnotesize Outdoors, temperature and absolute humidity
+  compensate each other (no correction required); indoors, correction per
+  IEC 60060-1 is required.}
+\end{frame}
+
+\begin{frame}{Overvoltage definition}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.45em}
+        \item Overvoltages inside the converter are not based on experience
+              values.
+        \item Definition must be based on EMT-type simulations.
+        \item Component modelling must be adjusted to the anticipated analysis.
+        \item Simulation time step must be appropriate to the simulation.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\icfig{m07_image13}}\\[0.3em]
+      {\color{atGray}\footnotesize Transformer representation considering
+      capacitive effects.}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Faults for overvoltage definition}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.45em}
+        \item Overvoltages within the converter are defined by converter
+              internal faults.
+        \item Converter internal faults are given by the converter design.
+        \item Fault clearance depends on: DC protection (DC fault detection)
+              and circuit-breaker operation.
+      \end{itemize}
+      \vspace{0.3em}
+      {\color{atGray}\footnotesize CIGRE 832 --- Guide for Electromagnetic
+      Transient Studies Involving VSC Converters.}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image14}}
+    \end{column}
+  \end{columns}
+\end{frame}

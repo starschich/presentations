@@ -1,0 +1,71 @@
+% =============================================================
+%  AC circuit breaker (Module 06, slides 3-4)
+% =============================================================
+\intermezzo{AC circuit breaker}{}
+
+\begin{frame}{Operation principle}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      Their main purpose is to clear any fault that might occur in the
+      HVDC system.
+
+      \vspace{0.6em}
+      \textbf{Operation principle:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.35em}
+        \item Rapidly separate two contacts surrounded by a liquid or
+              gaseous insulating medium.
+        \item Arcing period until the next zero crossing of the current.
+        \item Arc is extinguished as quickly as possible.
+        \item After interruption a transient recovery voltage (TRV) appears
+              across the open contacts.
+      \end{itemize}
+
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\cfig{image5}}
+      \vspace{-0.2em}
+      {\color{atGray}\footnotesize High-voltage circuit breakers from 72.5\,kV up to 1100\,kV - Siemens Energy.}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Mechanical set-up}
+  Two types of mechanical set-ups are available.
+  \vspace{1em} 
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Live tank circuit breaker (LTB)}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image6}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Dead tank circuit breaker (DTB)}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image7}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Mechanical set-up}
+  \begin{table}[h]
+  \centering
+  \label{tab:ltb-vs-dtb}
+  \begin{tabular}{p{0.28\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+  \hline
+  \textbf{Attribute} & \textbf{Live Tank (LTB)} & \textbf{Dead Tank (DTB)} \\
+  \hline
+  Interrupter potential & Line voltage & Ground \\
+  Integral CTs & No (separate post CTs) & Yes (in bushings) \\
+  Seismic performance & Weaker \newline (high center of gravity) & Strong \newline (low center of gravity) \\
+  Cost & Lower & Higher \\
+  Footprint / weight & Smaller / lighter & Larger / heavier \\
+  SF$_6$ volume & Less & More \\
+  Maintenance access & Harder & Easier \\
+  Typical market & Europe / IEC & North America / ANSI \newline high-seismic \\
+  \hline
+  \end{tabular}
+  \end{table}
+\end{frame}

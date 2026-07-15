@@ -166,6 +166,19 @@
   \end{frame}}
 }
 
+% ---- Intermediate divider (white bg): \intermezzo{Title}{Subtitle} ----
+% Light-background transition slide between subsections.
+\newcommand{\intermezzo}[2]{%
+  {\setbeamercolor{background canvas}{bg=atPaper}%
+  \begin{frame}[plain]
+    \vfill
+    {\color{atAccent}\rule{2.2cm}{2.5pt}}\\[0.6em]
+    {\color{atBlack}\fontsize{30}{34}\selectfont\textbf{#1}}\\[0.4em]
+    {\color{atGray}\large #2}
+    \vfill
+  \end{frame}}
+}
+
 % ---- Closing slide: \closingslide{tagline}{contact line} ----
 \newcommand{\closingslide}[2]{%
   {\setbeamercolor{background canvas}{bg=atBlack}%

@@ -1,0 +1,170 @@
+% ---- Intermediate (white) divider before the converter transformer ----
+\intermezzo{Converter transformer}{Connecting the ac system and the converter}
+
+\begin{frame}{Converter transformer}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.45em}
+        \item Provides the connection between the ac system and the converter.
+        \item Basic function as a normal ac power transformer: Transform the
+              ac voltage between the ac grid level and the voltage required
+              by the converter.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.9\textheight,keepaspectratio]{\cfig{image9}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Concept considerations}
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \item Vector group
+    \item 1-phase vs. 3-phase
+    \item 2-winding vs. 3-winding
+    \item On-Load Tap Changer (OLTC)
+    \item Mechanical design limitations
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Vector Group}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Yd transformer}\\[0.4em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{transformer_yd_3w}}
+      \end{minipage}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Yy transformer}\\[0.4em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{transformer_yyd}}
+      \end{minipage}
+    \end{column}
+  \end{columns}
+
+   \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \item Yy transformer group requires a third winding which must be delta connected to provide compensation for unsymmetrical faults
+  \end{itemize} 
+
+\end{frame}
+
+\begin{frame}{2-winding vs. 3-winding}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{2-winding}\\[-0.2em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{transformer_yd_2w}}
+      \end{minipage}
+      \begin{minipage}[b][0.1\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=\textheight,keepaspectratio]{\cfig{transformer_yd_2w_sld}}
+      \end{minipage}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{3-winding}\\[-0.2em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{transformer_yd_3w}}
+      \end{minipage}
+      \begin{minipage}[c][0.1\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{transformer_yy_sld}}
+      \end{minipage}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{1-phase vs. 3-phase}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{3-phase}\\[0.35em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image16}}
+      \end{minipage}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{1-phase}\\[0.4em]
+      \begin{minipage}[c][0.62\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image9}}
+      \end{minipage}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{1-phase vs. 3-phase}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.35\textwidth}
+      \centering
+      \textbf{1-phase transformer}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image17}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{3-phase transformer}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\cfig{image18}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Mechanical design limitations - Transportation}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\cfig{image19}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\cfig{image20}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{On-Load Tap Changer (OLTC)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.45em}
+        \item Mechanical switching device that changes the turns-ratio of
+              the transformer in voltage steps.
+        \item A tap-changer step adds or subtracts 1--1.25\% to the
+              converter transformer turns ratio.
+        \item Usually up to $\sim$32 steps, giving a maximum voltage change
+              of around 40\%.
+        \item Mechanical device with limited operation speed --- cannot be
+              used for dynamic control.
+      \end{itemize}
+      \vspace{0.3em}
+
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\cfig{image21}}
+      {\color{atGray}\footnotesize Transmission Systems: Line Commutated
+      Converters. \textcopyright\ GE Vernova, 2023}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{On-Load Tap Changer (OLTC)}
+  \centering
+  \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\cfig{image22}}\\[0.4em]
+  {\color{atGray}\footnotesize Fig. 6.4.3e --- Line-side cleat bar for 3-phase, 2-winding transformer, star connection.\\ \textcopyright\ GE Vernova, 2023.}
+\end{frame}
+
