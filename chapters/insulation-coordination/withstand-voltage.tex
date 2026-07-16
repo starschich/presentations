@@ -1,0 +1,139 @@
+% =========================
+%  Insulation Coordination
+% =========================
+\intermezzo{Withstand Voltage}{}
+
+
+\begin{frame}{Withstand voltage definition process}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.5\textwidth}
+      \begin{enumerate}
+        \setlength{\itemsep}{0.4em}
+        \item Determination of the \\representative overvoltages $U_{rp}$
+        \item Determination of the co-ordination \\withstand voltages $U_{cw}$. \\For HVDC it can be assumed:\\
+              \quad$U_{cw} = U_{rp}$
+        \item Determination of the required \\ withstand voltages $U_{rw}$
+        \item Determination of the specified \\ withstand voltages $U_w$
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\icfig{m08_image17}}\\[0.3em]
+      {\color{atGray}\footnotesize IEC 60071-11:2022.}
+    \end{column}
+  \end{columns}
+  \vspace{0.2em}
+\end{frame}
+
+\begin{frame}{Representative overvoltages ($U_{rp}$)}
+  \begin{block}{IEC 60071-11:2022}
+    ``... representative overvoltages are equal to protection levels of
+    arresters for directly protected equipment.''
+  \end{block}
+  \begin{itemize}
+    \setlength{\itemsep}{0.4em}
+    \item The statement is misleading: the arrester protection level is
+          defined by the arrester design and the protection-coordination
+          current amplitude and shape (lightning, switching).
+    \item Representative overvoltages can be determined by assuming maximum
+          system currents and switching impulse, or by transient-simulation
+          analysis of relevant faults.
+    \item Calculation and simulation results without any margin are
+          considered as the representative overvoltage $U_{rp}$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Required withstand voltages ($U_{rw}$)}
+  
+  $U_{rw}$ is defined as:\\
+  {\centering $U_{rw}=K_a \cdot K_s \cdot U_{rp}$\par}
+  \vspace{1em}
+  
+  $K_a$ Ambient condition correction factor
+  \begin{itemize}
+    \item Altitude correction
+    \item Temperature / humidity correction for indoor installations
+  \end{itemize}
+  \vspace{1em}
+  
+  $K_s$ Safety factor
+  \begin{itemize}
+    \item Altitude correction up to 1000m
+    \item allowance for ageing of insulation
+    \item allowance for changes in arrester characteristics
+    \item allowance for dispresion in the product quality
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Required withstand voltages ($U_{rw}$)}
+
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image19}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image20}}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  {\color{atGray}\footnotesize IEC 60071-11:2022.}
+\end{frame}
+
+\begin{frame}{Specified withstand voltages ($U_w$)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Values are equal to or higher than $U_{rw}$.
+        \item For AC equipment they correspond to the standard values in
+              IEC 60071-1.
+        \item For HVDC equipment they are rounded up to convenient values
+              (in most cases IEC 60071-1).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \renewcommand{\arraystretch}{1.15}
+      \textbf{Proposed $U_w$ / kV}\\[0.3em]
+      \begin{tabular}{@{}rr@{}}
+        \hline
+        550  & 1300 \\
+        650  & 1425 \\
+        750  & 1550 \\
+        850  & 1675 \\
+        950  & 1800 \\
+        1050 & 1950 \\
+        1175 &      \\
+        \hline
+      \end{tabular}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Example for insulation point coordination}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \renewcommand{\arraystretch}{1.3}
+      \begin{tabular}{@{}p{4.2cm}r@{}}
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        CCOV                        & 515\,kV \\
+        Number of parallel columns  & 8 \\
+        Energy capability           & 17\,MJ \\
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \renewcommand{\arraystretch}{1.3}
+      \begin{tabular}{@{}p{4.4cm}r@{}}
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        SIPL ($U_{rp}$ for SI) & 807\,kV @ 1\,kA \\
+        LIPL ($U_{rp}$ for LI) & 872\,kV @ 5\,kA \\
+      \end{tabular}
+    \end{column}
+  \end{columns}
+\end{frame}

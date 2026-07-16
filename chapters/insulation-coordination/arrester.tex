@@ -1,0 +1,132 @@
+% =========================
+%  Insulation Coordination
+% =========================
+\intermezzo{Arrester}{}
+
+\begin{frame}{Overvoltages in AC grids}
+  \centering
+  \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\icfig{m08_image7}}\\[0.3em]
+  {\color{atGray}\footnotesize ``Metal-Oxide Surge Arresters in High-Voltage
+  Power Systems'', Volker Hinrichsen.}
+\end{frame}
+
+\begin{frame}{Arrester design}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Arresters used today are metal-oxide (MO) arresters without gaps.
+        \item Made from MO resistor disks connected in series.
+        \item The number of series-connected resistors defines the arrester
+              characteristics.
+        \item MO resistors have an extremely non-linear $U-I$ characteristic.
+        \item Resistors are placed in a housing for protection against
+              environmental conditions.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.68\textheight,keepaspectratio]{\icfig{m08_image8}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{U--I arrester characteristic}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.35em}
+        \item $U_S$: maximum system voltage (phase-phase AC).
+        \item $U_c$: maximum continuous operating voltage (MCOV).
+        \item For DC applications the crest value of continuous operating
+              voltage (CCOV) is used instead of MCOV.
+        \item Lightning impulse current ($I_n$): $8/20 \mu s$
+              (fast-front).
+        \item Switching impulse current: $30/60 \mu s$ (slow-front).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.68\textheight,keepaspectratio]{\icfig{m08_image9}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Arrester protection capability --- connection}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Protection capability is based on providing a low-impedance
+              path towards earth.
+        \item That impedance is defined by the arrester itself and by its
+              connection to the overhead line and to earth.
+        \item Either accurate calculations or safety margins are applied to
+              account for those effects.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image10}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Arrester protection capability - travelling wave}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item The surge current will enter a ``dead end'' (e.g. transformer):
+              even with an arrester installed, the travelling wave enters the
+              transformer connection and causes voltage stress.
+        \item The resulting stress is an overlap of the incoming surge, its
+              reflection and the arrester protection rating.
+        \item Equipment voltage stress therefore depends not only on the
+              arrester protective level but also on the distance between
+              arrester and protected device.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image11}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Energy handling capability}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item \textbf{Simple impulse handling} --- energy injected in only a
+              few \textmu s must not cause mechanical damage.
+        \item \textbf{Thermal energy handling} --- maximum energy injected
+              during a transient at which the arrester can still cool back to
+              its nominal operating temperature.
+        \item Not precisely defined in the standards, so for VSC-HVDC the
+              energy loading of the arrester is an important design point.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image12}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Arrester configuration in VSC-HVDC systems}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image15}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image16}}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  \centering
+  {\color{atGray}\footnotesize IEC 60071-11:2022.}
+\end{frame}
