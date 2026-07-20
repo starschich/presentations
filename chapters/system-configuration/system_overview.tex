@@ -9,7 +9,8 @@
   \begin{columns}[c,onlytextwidth]
     \begin{column}{1\textwidth}
       \centering
-        \topoimg[width=\linewidth,height=0.85\textheight,keepaspectratio]{chapters/system-configuration/system_overview}
+        % \topoimg[width=\linewidth,height=0.85\textheight,keepaspectratio]{chapters/system-configuration/system_overview_poi_1}
+        \topoimg[width=\linewidth,height=0.85\textheight,keepaspectratio]{chapters/system-configuration/system_overview_poi_2}
     \end{column}
   \end{columns}
 \end{frame}
@@ -21,7 +22,8 @@
     \item \textbf{Power} - Projects with $1000MW$ and $3000MW$ power transmission requirements
     \item \textbf{DC line} - 130 -200 miles, with priority to OHL, but cable sections can be implemented to accelerate the permission process.
     \item \textbf{Generation} - Geothermal power plants is the main generation source. Additional generation sources might be implemented once the transmission system is established.
-    \item \textbf{Load} - The main load are data centers. The interconnection voltage to the data centers to be defined ($36kV$ or $800V$).
+    % \item \textbf{Load} - The main load are data centers. The interconnection voltage to the data centers to be defined ($36kV$ or $800V$).
+    \item \textbf{Load} - The main load are data centers.
     \item \textbf{BESS} - Battery storage is assumed for backup and for datacenter load flicker compensation.
     \item \textbf{AC Chopper} - For fault ride through, installation of the AC chopper might be required.
   \end{itemize}
@@ -34,9 +36,11 @@
     \item Islanded operation with no interconnection to the AC grid
     \item Generation is build out in $300MW$ steps and is defined by the water availability \\ $\Rightarrow$ Staged buildout of the transmission line is beneficial
     \item High realiability requirements by datacenters
-    \item Execution time is critical
+    % \item Execution time is critical
     \item Standardized hardware design approach to reduce hardware lead times and configuration variations
     \item Building up C\&P capabilities to reduce risk and execution times in project execution
+    \item \textbf{Reduction of execution time is very critical}
+    \item \textbf{4} initial projects, 2 x $1000MW$ and 2 x $3000GW$
   \end{itemize}
 \end{frame}
 
@@ -102,7 +106,8 @@
 \end{frame}
 
 
-\begin{frame}{Working Packages}
+% \begin{frame}{Working Packages}
+\begin{frame}{Working Packages Ongoing}
   \begin{itemize}
   \setlength{\itemsep}{0.5em}
   \item \textbf{DC line}
@@ -110,7 +115,8 @@
       \item Local company is working on DC route definition and DC line design
 
     \end{itemize}
-  \item \textbf{Network Control \& Protection}
+  
+    \item \textbf{Network Control \& Protection}
     \begin{itemize}
       \item Operation concept definition
       \item Offline studies for concept verification
@@ -118,25 +124,51 @@
       \item Definition of performance verification tests and evaluation criteria
       \item Control hardware definition
     \end{itemize}
-  \item \textbf{HVDC concept evaluation}
-    \begin{itemize}
-      \item Technical evaluation of HVDC concepts
-      \item Commercial evaluation of HVDC concepts
-      \item OEMs should be approached with only one concept
-    \end{itemize}
+  
+    % \item \textbf{HVDC concept evaluation}
+    % \begin{itemize}
+    %   \item Technical evaluation of HVDC concepts
+    %   \item Commercial evaluation of HVDC concepts
+    %   \item OEMs should be approached with only one concept
+    % \end{itemize}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Working Packages}
+% \begin{frame}{Working Packages}
+%   \begin{itemize}
+%   \setlength{\itemsep}{0.5em}
+%   \item \textbf{Project execution}
+%     \begin{itemize}
+%       \item Converter specification to receive a binding offer (FEED phase avoided to reduce the execution time)
+%       \item Supplier evaluation and selection (it is expected that suppliers from Asia might be more suitable for our approach)
+%       \item Testlab buildout for real time simulations
+%       \item Project execution support (Owners Engineer)
+%     \end{itemize}
+% \end{itemize}
+% \end{frame}
+
+
+\begin{frame}{Working Packages\\ HVDC configuration by build size and phasing}
   \begin{itemize}
   \setlength{\itemsep}{0.5em}
-  \item \textbf{Project execution}
+  \item Recommended configuration for $300MW$, $500MW$, $1GW$, $2GW$, $3GW$
     \begin{itemize}
-      \item Converter specification to receive a binding offer (FEED phase avoided to reduce the execution time)
-      \item Supplier evaluation and selection (it is expected that suppliers from Asia might be more suitable for our approach)
-      \item Testlab buildout for real time simulations
-      \item Project execution support (Owners Engineer)
+      \item Monopole vs bipole by capacity
+      \item Voltage class by size and distance: $\pm320kV$, $\pm400kV$, $\pm525kV$
+
     \end{itemize}
+  
+    \item Modular expansion path from first stage to GW scale
+    \begin{itemize}
+      \item Oversizing on day 1 vs future expansion
+      \item Oversizing for redundancy
+      \item Expansion from $300-500MW$ initial build to $1-2GW$
+      \item Design approach for staged customer commitments
+      \item Cost and schedule penalties from deferred expansion
+      \item Avoiding stranded capex
+    \end{itemize}  
 \end{itemize}
 \end{frame}
+
+
