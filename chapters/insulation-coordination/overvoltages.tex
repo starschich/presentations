@@ -44,7 +44,7 @@
 
 \begin{frame}{Temporary overvoltage in the AC grid}
   \begin{columns}[c,onlytextwidth]
-    \begin{column}{0.54\textwidth}
+    \begin{column}{0.4\textwidth}
       \begin{itemize}
         \setlength{\itemsep}{0.5em}
         \item Temporary overvoltages are defined by grid codes such as IEEE 2800, NERC PRC-024 or NERC PRC-029
@@ -52,7 +52,7 @@
       \end{itemize}
       \vspace{0.3em}
     \end{column}
-    \begin{column}{0.42\textwidth}
+    \begin{column}{0.6\textwidth}
       \centering
       \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image8}}
       {\color{atGray}\footnotesize PRC-024-3 - Frequency and Voltage Protection Settings for Generating Resources.}
@@ -69,12 +69,12 @@
         \item Testing in a high-voltage lab
         \item Definition of air clearances
       \end{itemize}
-      \vspace{0.3em}
-      {\color{atGray}\footnotesize www.highvolt.com}
     \end{column}
     \begin{column}{0.50\textwidth}
       \centering
       \topoimg[width=\linewidth,height=0.64\textheight,keepaspectratio]{\icfig{m07_image9}}
+      \vspace{0.3em}
+      {\color{atGray}\footnotesize www.highvolt.com}      
     \end{column}
   \end{columns}
 \end{frame}
@@ -83,7 +83,7 @@
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.48\textwidth}
       \centering
-      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image11}}
+      \topoimg[width=\linewidth,height=0.85\textheight,keepaspectratio]{\icfig{m07_image11}}
     \end{column}
     \begin{column}{0.48\textwidth}
       \centering
@@ -91,19 +91,20 @@
     \end{column}
   \end{columns}
   \vspace{0.3em}
-  {\color{atGray}\footnotesize IEC 60071.}
+  \centering
+  {\color{atGray}\footnotesize IEC 60071-1:2019}
 \end{frame}
 
 \begin{frame}{Environmental conditions}
-  Overvoltages apply for ``normal environmental conditions'' and ``standard
-  reference atmospheric conditions'' (IEC 60071-1, §5.9).
+  Overvoltages apply for ``normal environmental conditions'' and ``standard reference atmospheric conditions'' (IEC 60071-1, §5.9).
+  \vspace{1em}
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.48\textwidth}
       \textbf{Normal environmental conditions}
       \begin{itemize}
         \setlength{\itemsep}{0.3em}
         \item Temperature range $-40$\,\textdegree C\,/\,$+40$\,\textdegree C
-        \item Altitude $<1000$\,m
+        \item Altitude $<1000m$
         \item Ambient air not significantly polluted
       \end{itemize}
     \end{column}
@@ -117,10 +118,8 @@
       \end{itemize}
     \end{column}
   \end{columns}
-  \vspace{0.4em}
-  {\color{atGray}\footnotesize Outdoors, temperature and absolute humidity
-  compensate each other (no correction required); indoors, correction per
-  IEC 60060-1 is required.}
+  \vspace{1em}
+  Outdoors, temperature and absolute humidity compensate each other (no correction required); indoors, correction per IEC 60060-1 is required.
 \end{frame}
 
 \begin{frame}{Overvoltage definition}
@@ -146,22 +145,20 @@
 
 \begin{frame}{Faults for overvoltage definition}
   \begin{columns}[c,onlytextwidth]
-    \begin{column}{0.54\textwidth}
+    \begin{column}{0.4\textwidth}
       \begin{itemize}
-        \setlength{\itemsep}{0.45em}
-        \item Overvoltages within the converter are defined by converter
-              internal faults.
+        \setlength{\itemsep}{0.4em}
+        \item Overvoltages within the converter are defined by converter internal faults.
         \item Converter internal faults are given by the converter design.
         \item Fault clearance depends on: DC protection (DC fault detection)
               and circuit-breaker operation.
       \end{itemize}
       \vspace{0.3em}
-      {\color{atGray}\footnotesize CIGRE 832 --- Guide for Electromagnetic
-      Transient Studies Involving VSC Converters.}
     \end{column}
-    \begin{column}{0.42\textwidth}
+    \begin{column}{0.6\textwidth}
       \centering
-      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image14}}
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m07_image14}}\\
+      {\color{atGray}\footnotesize CIGRE 832 --- Guide for Electromagnetic Transient Studies Involving VSC Converters.}
     \end{column}
   \end{columns}
 \end{frame}

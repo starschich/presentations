@@ -68,19 +68,10 @@
 
 
 \begin{frame}{Required withstand voltages ($U_{rw}$)}
-
-  \begin{columns}[c,onlytextwidth]
-    \begin{column}{0.48\textwidth}
-      \centering
-      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image19}}
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \centering
-      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image20}}
-    \end{column}
-  \end{columns}
-  \vspace{0.3em}
-  {\color{atGray}\footnotesize IEC 60071-11:2022.}
+      Definition safety factor $K_s$\\
+      \centering      
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\icfig{m08_image19}}\\
+      {\color{atGray}\footnotesize IEC 60071-11:2022}
 \end{frame}
 
 \begin{frame}{Specified withstand voltages ($U_w$)}
@@ -88,11 +79,11 @@
     \begin{column}{0.54\textwidth}
       \begin{itemize}
         \setlength{\itemsep}{0.4em}
-        \item Values are equal to or higher than $U_{rw}$.
+        \item Values are equal to or higher than $U_{rw}$
         \item For AC equipment they correspond to the standard values in
-              IEC 60071-1.
-        \item For HVDC equipment they are rounded up to convenient values
-              (in most cases IEC 60071-1).
+              IEC 60071-1
+        \item For HVDC equipment they are rounded up to convenient values\\
+              (in most cases IEC 60071-1)
       \end{itemize}
     \end{column}
     \begin{column}{0.42\textwidth}
@@ -115,25 +106,46 @@
 \end{frame}
 
 \begin{frame}{Example for insulation point coordination}
+  Arrester: DC line/cable arrester (DL)
+  \vspace{0.5em}
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.48\textwidth}
-      \renewcommand{\arraystretch}{1.3}
-      \begin{tabular}{@{}p{4.2cm}r@{}}
-        \textbf{Parameter} & \textbf{Value} \\
+      Arrester design:
+      \newline\newline
+      % \renewcommand{\arraystretch}{1.3}
+      % \begin{tabular}{@{}p{4.2cm}r@{}}
+      \begin{tabular}{@{}l l@{}}
+        Parameter & Value \\
         \hline
-        CCOV                        & 515\,kV \\
-        Number of parallel columns  & 8 \\
-        Energy capability           & 17\,MJ \\
+        CCOV & $515kV$ \\
+        Columns & $8$ \\
+        Energy capability & $17MJ$ \\
       \end{tabular}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \renewcommand{\arraystretch}{1.3}
-      \begin{tabular}{@{}p{4.4cm}r@{}}
-        \textbf{Parameter} & \textbf{Value} \\
+      System analysis:
+      \newline\newline
+      \vspace{1em}
+      % \renewcommand{\arraystretch}{1.3}
+      % \begin{tabular}{@{}p{4.4cm}r@{}}
+      \begin{tabular}{@{}l l@{}}
+        Parameter & Value\\
         \hline
-        SIPL ($U_{rp}$ for SI) & 807\,kV @ 1\,kA \\
-        LIPL ($U_{rp}$ for LI) & 872\,kV @ 5\,kA \\
+        SIPL ($U_{rp}$ for SI) & $807kV @ 1kA$ \\
+        LIPL ($U_{rp}$ for LI) & $872kV @ 5kA$ \\
       \end{tabular}
     \end{column}
   \end{columns}
+  \vspace{1em}
+  Required Switching/Lightning Impulse withstand voltage (RSIWV/ RLIWV):\\
+  \begin{tabular}{l l}
+    Switching: & $U_{rw} = 1.15 \cdot 807kV = 928kV$\\
+    Lightning: & $U_{rw} = 1.2 \cdot 872kV = 1046kV$\\    
+  \end{tabular}
+  \newline\newline
+  Switching/Lightning Impulse withstand voltage (SIWV/ LIWV):\\
+    \begin{tabular}{l l}
+    Switching: & $U_{w} = 950kV$\\
+    Lightning: & $U_{w} = 1050kV$\\    
+  \end{tabular}
 \end{frame}
