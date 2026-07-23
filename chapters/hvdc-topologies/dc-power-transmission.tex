@@ -1,0 +1,409 @@
+% =============================================================
+%  Chapter — DC Power Transmission (Module 03)
+%  Figures in ./fig  (EMF & SVG converted to cropped PDF, PNG/JPG copied).
+%  Note: figures are referenced WITH extension because some basenames
+%        exist as both .pdf and .png.
+% =============================================================
+\newcommand{\dcfig}[1]{chapters/hvdc-topologies/fig/#1}
+
+\sectionslide{DC Power Transmission}{Converters, topologies and load flow}
+
+% ---- Converter ----------------------------------------------
+\begin{frame}{Converter}
+  \centering
+  \topoimg[width=0.7\linewidth,height=0.3\textheight,keepaspectratio]{\dcfig{image4.pdf}}\\[0.6em]
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Inverter}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.3\textheight,keepaspectratio]{\dcfig{image5.pdf}}
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Rectifier}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.3\textheight,keepaspectratio]{\dcfig{image6.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Converter - Load flow definition}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Positive load is defined for the inverter case (generator
+              convention).
+        \item In the USA a common term is ``Inverter-Based Resources'' (IBR).
+        \item IBR are not only HVDC systems but all kinds of generators:
+          \begin{itemize}
+            \item Wind Turbine Generators (WTG)
+            \item PV, \ldots
+          \end{itemize}
+        \item A VSC-HVDC system can be an inverter or a rectifier depending
+              on the power-flow direction; some applications require changing
+              direction.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.40\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\dcfig{image7.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Converter terminology}
+  \centering
+  \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\dcfig{image8.png}}\\[0.3em]
+  {\color{atGray}\footnotesize IEC 62747:2014}
+\end{frame}
+
+\begin{frame}{DC load flow definitions}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.4\textwidth}\centering
+      \begin{itemize}
+        \item DC equipment (incl. DC line) voltage is defined by the voltages $U_{dpe\_rec}$ and $U_{dpe\_inv}$
+        \item Converter size is defined by $U_{dpp\_rec}$
+        \item HVDC systems have bidirectional transmission capability, which means that every individual converter can be either rectifier or inverter
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.5\textheight,keepaspectratio]{\dcfig{image9.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---- Monopole -----------------------------------------------
+\begin{frame}{Monopole}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.6\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\dcfig{image12.pdf}}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \textbf{DC load flow}
+      \begin{align*}
+        U_{dpp\_rec} &= U_{dpe\_rec}\\
+        I_{DC} &= \tfrac{U_{dpp\_rec}-U_{dpp\_inv}}{2 \cdot R_{DC}}\\
+        U_{dne\_rec} &= I_{d}\cdot R_{DC}
+      \end{align*}
+      \begin{itemize}
+        \item Max.\ voltage created by converter: $U_{dpp\_rec}$
+        \item Max. equipment voltage: 
+        \item \textcolor{red}{DC cables have different voltage ratings}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Monopole - extending power transmission}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item \textbf{Higher DC voltage}
+            \begin{itemize}
+              \item Limited equipment availability
+              \item No redundancy
+            \end{itemize}
+        \item \textbf{Higher DC current}
+            \begin{itemize}
+              \item Higher DC line costs
+              \item No redundancy
+            \end{itemize}
+        \item \textbf{Additional monopole}
+            \begin{itemize}
+              \item Additional converter equipment
+              \item 4 DC conductors
+              \item Increased reliability
+            \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.34\textheight,keepaspectratio]{\dcfig{image14.pdf}}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.34\textheight,keepaspectratio]{\dcfig{image13.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Monopole $\rightarrow$ Bipole (BIP)}
+  \centering
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.42\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.5\textheight,keepaspectratio]{\dcfig{image13.pdf}}\\[0.4em]
+      \topoimg[width=\linewidth,height=0.5\textheight,keepaspectratio]{\dcfig{image14.pdf}}
+    \end{column}
+    \begin{column}{0.06\textwidth}\centering $\Rightarrow$ \end{column}
+    \begin{column}{0.42\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\dcfig{image15.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Bipole (BIP)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item 3 conductors of 2 different types.
+        \item Two poles that can transmit power independently.
+        \item On a fault in one pole, the other pole still transmits power ---
+              redundancy.
+        \item In symmetrical operation (both poles equal), no current flows
+              through the DMR.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\dcfig{image16.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{BIP operation modes}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image17.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Bipolar --- balanced}\\ 
+      \begin{itemize}
+        \item Equal power for poles
+        \item No DMR current
+        \item Loss-optimized
+      \end{itemize}
+      }
+    \end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image18.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Monopolar}\\
+      \begin{itemize}
+        \item Emergency mode
+        \item System-design definition
+      \end{itemize}
+      }
+    \end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image19.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Bipolar --- unbalanced}\\
+      \begin{itemize}
+        \item Split-busbar operation
+        \item DMR current flow
+      \end{itemize}
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{DC load flow}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.5\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.4\textheight,keepaspectratio]{\dcfig{image20.pdf}}
+      
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      {\centering
+      \topoimg[width=\linewidth,height=0.4\textheight,keepaspectratio]{\dcfig{image21.pdf}}\\[0.4em]}
+
+      For DC load-flow calculation the converter can be represented as an ideal voltage source.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Balanced operation}
+  \centering
+  \topoimg[width=\linewidth,height=0.74\textheight,keepaspectratio]{\dcfig{image22.png}}
+\end{frame}
+
+\begin{frame}{Balanced operation - power definition}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\dcfig{image22.png}}
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\dcfig{image24.png}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Balanced vs. unbalanced operation}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Balanced mode}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\dcfig{image22.png}}
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Unbalanced mode}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.6\textheight,keepaspectratio]{\dcfig{image26.png}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Monopolar operation}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.6\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.7\textheight,keepaspectratio]{\dcfig{image28.png}}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Usually for a short period, until system reconfiguration is
+              finished.
+        \item For longer operation, the DMR must be designed accordingly.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{System earthing}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\dcfig{image28.png}}
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\dcfig{image30.png}}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  Earthing of the BIP system has no impact on the resulting currents and losses.
+\end{frame}
+
+% ---- Rigid Bipole -------------------------------------------
+\begin{frame}{BIP $\rightarrow$ Rigid BIP}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Bipole}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\dcfig{image16.pdf}}
+    \end{column}
+    \begin{column}{0.48\textwidth}\centering
+      \textbf{Rigid Bipole}\\[0.3em]
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\dcfig{image32.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Rigid BIP}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item 2 conductors of 1 type.
+        \item Both poles must transmit the same power (same current flows
+              through both poles).
+        \item On a fault in one pole, the other pole might not be able to
+              transmit the power.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.62\textheight,keepaspectratio]{\dcfig{image32.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Rigid BIP operation modes}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image33.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Common-busbar}\\ 
+      \begin{itemize}
+        \item Standard operation mode.
+      \end{itemize}
+      }
+    \end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image34.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Split-busbar}\\
+      \begin{itemize}
+        \item Poles must keep equal power in all modes (incl.\ dynamic events)
+      \end{itemize}
+      }
+    \end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.42\textheight,keepaspectratio]{\dcfig{image35.pdf}}\\[0.3em]
+      {\footnotesize\textbf{Monopolar}\\
+      \begin{itemize}
+        \item Reconfiguration takes $>1$\,s.
+      \end{itemize}
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---- Symmetrical Monopole -----------------------------------
+\begin{frame}{Symmetrical Monopole (SMP)}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\dcfig{image37.pdf}}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item High-impedance earth reference on the AC side
+        \item $U_{dpp\_Rec}= 2 \cdot \lvert U_{dpe\_Rec} \rvert$
+        \item $I_d=\frac{U_{dpp\_rec} - U_{dpp\_inv}}{2 \cdot R_d}$
+        \item Only for VSC-HVDC systems
+        \item \textcolor{green}{DC cables have the same voltage rating} 
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---- MMC comparison table -----------------------------------
+\begin{frame}{Modular Multilevel Converter (MMC)}
+  Power transmission parameters:
+  \begin{itemize}
+    \item Power: 1000\,MW
+    \item DC voltage: $\pm$ 320 kV
+    \item Max. DC current: 1563 A
+  \end{itemize}
+  \vspace{0.6em}
+
+  \centering
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{@{}l c c c@{}}
+     & \textbf{2 $\times$ Monopole} & \textbf{1 $\times$ BIP} & \textbf{1 $\times$ SMP} \\
+    \hline
+    Transformers      & \textcolor{red}{$--$} & \textcolor{red}{$--$} & \textcolor{green}{$++$} \\
+    DC lines          & \textcolor{red}{4 lines / 2 types} & \textcolor{red}{3 lines / 2 types} & \textcolor{green}{2 lines / 1 type}\\
+    Converters        & \textcolor{red}{4 converters} & \textcolor{red}{4 converters} & \textcolor{green}{2 converters}\\
+    Converter rating ($U_{dpp}$) & \textcolor{green}{320\,kV} & \textcolor{green}{320\,kV} & \textcolor{red}{640\,kV} \\
+    Losses            & \textcolor{red}{$--$} & \textcolor{red}{$-$} & \textcolor{green}{$+$} \\
+    Reliability       & \textcolor{red}{$++$} & \textcolor{red}{$+$} & \textcolor{red}{$--$} \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+% ---- DC cable -----------------------------------------------
+\begin{frame}{DC cable}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item \textbf{Insulator} --- XLPE (cross-linked polyethylene) or
+              MI (mass-impregnated).
+        \item \textbf{Conductor} --- copper or aluminium.
+        \item Balance between DC voltage and DC current for the most
+              economical design.
+        \item Insulator is generally cheaper than conductor
+              $\rightarrow$ higher voltage rating is preferred
+      \end{itemize}
+      \vspace{0.3em}
+      Project voltages: 80/200/250/\textbf{320}/400/\textbf{525}\,kV\\
+      (525\,kV is new standard for $\ge 2000$\,MW).
+    \end{column}
+    \begin{column}{0.40\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.4\textheight,keepaspectratio]{\dcfig{image39.png}}\\[0.4em]
+      \topoimg[width=0.8\linewidth,height=0.28\textheight,keepaspectratio]{\dcfig{image38.jpg}}\\
+      {\color{atGray}\scriptsize www.borealisgroup.com}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---- Topology comparison table ------------------------------
+\begin{frame}{Topology comparison}
+  \centering
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{@{}p{4.6cm} c c c@{}}
+     & \textbf{Sym.\ Monopole} & \textbf{Rigid Bipole} & \textbf{Bipole w/ MR} \\
+    \hline
+    DC conductors                         & 2 & 2 & 3 \\
+    Power on converter fault              & 0\% & 50\% & 50\% \\
+    Power on DC conductor fault           & 0\% & 0\% & 50\% \\
+    Economical DC voltage                 & $\le 400$\,kV & $>500$\,kV & $>500$\,kV \\
+    Costs                                 & \$ & \$\$ & \$\$\$ \\
+    Max.\ power                           & \makecell{1400\,MW (320\,kV)\\1500\,MW (400\,kV)} & 2000\,MW & 3000\,MW \\
+    \hline
+  \end{tabular}
+\end{frame}
