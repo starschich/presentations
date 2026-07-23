@@ -1,0 +1,193 @@
+% =============================================================
+%  Chapter — Operational Performance Reporting of HVDC Systems
+%  Definitions and calculation formulas per CIGRE TB 956 (2025),
+%  which supersedes TB 590. Reference: IEC 60633:2019,
+%  IEC TR 62672:2018.
+%
+%  Note: time values are expressed in decimal hours
+%        (e.g. 6 h 30 min = 6.5 h).
+% =============================================================
+\sectionslide{Performance Reporting}{Availability definitions \& formulas — CIGRE TB 956}
+
+
+\begin{frame}{Scope of reporting}
+  \begin{block}{CIGRE TB 956 (2025) — supersedes TB 590}
+    A standardized protocol for reporting the annual operational
+    performance (reliability, availability, maintenance) of HVDC systems.
+  \end{block}
+  \vspace{0.4em}
+  \begin{itemize}
+    \setlength{\itemsep}{0.4em}
+    \item Reporting period is the calendar year (Jan–Dec).
+    \item Covers point-to-point links, back-to-back, multi-terminal
+          systems and DC grids (LCC and VSC).
+    \item Only events causing a loss of transfer capability are counted;
+          AC-system outages are recorded but excluded from HVDC
+          reliability figures.
+    % \item {\color{atGray}All durations are given in \textbf{decimal hours}
+    %       (6 h 30 min $= 6.5$ h).}
+  \end{itemize}
+\end{frame}
+
+
+% % ---- Symbols ------------------------------------------------
+% \begin{frame}{Symbols}
+%   \renewcommand{\arraystretch}{1.25}
+%   \begin{tabular}{@{}l l@{}}
+%     \textbf{Sym.} & \textbf{Description} \\
+%     \hline
+%     $P_m$   & Rated capacity (MW), excluding redundant equipment \\
+%     $P_o$   & Outage capacity — capacity reduction caused by the outage (MW) \\
+%     ODF     & Outage derating factor \\
+%     AOD     & Actual outage duration (decimal h) \\
+%     EOD     & Equivalent outage duration (decimal h) \\
+%     PH      & Period hours (calendar hours in reporting period) \\
+%     AOH     & Actual outage hours \quad$=\sum$ AOD \\
+%     EOH     & Equivalent outage hours \quad$=\sum$ EOD \\
+%     EU / EA & Energy unavailability / availability (\%) \\
+%     $U$     & Energy utilization (\%) \\
+%   \end{tabular}
+% \end{frame}
+
+
+% ---- Outage terms -------------------------------------------
+\intermezzo{Terms and Definitions}{}
+
+\begin{frame}{Outage classifications}
+  \begin{block}{Outage}
+    A state in which the HVDC system/station is unavailable at its maximum
+    continuous capacity due to an event related to the converter station
+    or DC line.
+  \end{block}
+  \vspace{0.3em}
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item \textbf{Scheduled outage} — planned, or deferrable to a suitable
+          time (e.g. preventive maintenance). Reported as ``PM''.
+    \item \textbf{Forced outage} — equipment unavailable but not in a scheduled-outage state.
+      \begin{itemize}
+        \item \emph{Trips} — sudden interruption by automatic protection or manual emergency shutdown.
+        \item \emph{Other forced outages} — unexpected problems forcing a capacity reduction without a trip.
+      \end{itemize}
+    \item \textbf{Forced Outage Rate (FOR)} - Ratio of the number of all complete or partial outages of one converter 
+    (or one pole in a bipolar configuration, respectively) tothe whole duration of operation.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Rated, outage capacity \& derating factor}
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item \textbf{Rated capacity $P_m$} — maximum capacity (MW) for continuous operation under normal conditions, excluding redundant equipment.
+          If seasonal, the highest value is used.
+    \item \textbf{Outage capacity $P_o$} — the capacity reduction (MW) the outage would have caused if the system were operating at $P_m$.
+    \item \textbf{Outage derating factor (ODF)} — ratio of outage capacity to rated capacity:
+  \end{itemize}
+  \vspace{0.4em}
+  {\centering\large $\displaystyle \mathrm{ODF} = \frac{P_o}{P_m}$ \par}
+  \vspace{0.3em}
+  \centering
+  {\color{atGray}\footnotesize A full outage gives $\mathrm{ODF}=1$; a partial loss gives $0<\mathrm{ODF}<1$.}
+\end{frame}
+
+\begin{frame}{Outage duration}
+  \begin{itemize}
+    \setlength{\itemsep}{0.6em}
+    \item \textbf{Period Hours (PH)}\\Calendar hours in the period: 8760 h/yr (8784 in a leap year)
+    \item \textbf{Actual outage duration (AOD)} — time elapsed (decimal h)
+          between the start and end of an outage, from the first switching
+          action to the return of the equipment to operational readiness.
+    \item \textbf{Equivalent outage duration (EOD)} — AOD weighted by the
+          derating factor, to account for partial loss of capacity:
+  \end{itemize}
+  \vspace{0.5em}
+  {\centering\large $\displaystyle \mathrm{EOD} = \mathrm{AOD}\times \mathrm{ODF}$ \par}
+  \vspace{0.5em}
+  \centering
+  {\color{atGray}\footnotesize Classified by type as equivalent forced (EFOD)\\ or equivalent scheduled (ESOD) outage duration.}
+\end{frame}
+
+\begin{frame}{Time categories\\Actual Outage Hours}
+  \begin{itemize}
+    \item \textbf{Actual Outage Hours (AOH)} \\
+    The sum of actual outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{AOH}=\sum \mathrm{AOD}$ \par}
+
+    \item \textbf{Actual forced outage hours (AFOH)} \\
+    The sum of equivalent forced outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{AFOH}=\sum \mathrm{AFOD}$ \par}
+
+    \item \textbf{Actual scheduled outage hours (ASOH)} \\
+    The sum of equivalent scheduled outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{ASOH}=\sum \mathrm{ASOD}$ \par}
+
+
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Time categories\\Equivalent Outage Hours}
+  \begin{itemize}
+    \item \textbf{Equivalent Outage Hours (EOH)} \\
+    The sum of equivalent outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{EOH}=\sum \mathrm{EOD}$ \par}
+
+    \item \textbf{Equivalent Forced Outage Hours (EFOH)} \\
+    The sum of equivalent forced outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{EFOH}=\sum \mathrm{EFOD}$ \par}
+
+    \item \textbf{Equivalent scheduled outage hours (ESOH)} \\
+    The sum of equivalent scheduled outage durations within the reporting period
+
+    {\centering $\displaystyle \mathrm{ESOH}=\sum \mathrm{ESOD}$ \par}
+
+
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Energy unavailability \& availability}
+  \begin{itemize}
+    \setlength{\itemsep}{0.4em}
+    \item \textbf{Energy unavailability (EU)}\\Percentage of energy that could not be transmitted due to outages:
+    \vspace{0.3em}
+
+    {\centering\large $\displaystyle \mathrm{EU}\,(\%) = \frac{\mathrm{EOH}}{\mathrm{PH}}\times 100$ \par}
+    \vspace{0.3em}
+
+    \item \textbf{Forced Energy Unavailability (FEU)}
+    \vspace{0.3em}
+
+      {\centering\large $\displaystyle \mathrm{FEU}=\frac{\mathrm{EFOH}}{\mathrm{PH}}\times 100$ \par}
+
+    \item \textbf{Scheduled Energy Unavailability (SEU)}
+    \vspace{0.3em}
+
+    {\centering\large $\displaystyle \mathrm{SEU}=\frac{\mathrm{ESOH}}{\mathrm{PH}}\times 100$ \par}
+
+    \item \textbf{Energy availability (EA)}\\Complement of unavailability:
+    \vspace{0.2em}
+
+    {\centering\large $\displaystyle \mathrm{EA}\,(\%) = 100 - \mathrm{EU}$ \par}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Energy utilization}
+  \begin{itemize}
+    \item \textbf{Energy utilization $U$} — measure of the energy actually
+          transmitted over the system, relative to its maximum possible:
+  \end{itemize}
+  \vspace{0.5em}
+  {\centering\large
+    $\displaystyle U\,(\%) = \frac{\mathrm{Total\,Energy\,Transmitted}}{P_m \times \mathrm{PH}}\times 100$ \par}
+  \vspace{0.6em}
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \item Total energy transmitted $=$ energy exported $+$ energy imported
+          (MWh), referred to the point at which $P_m$ is defined.
+  \end{itemize}
+\end{frame}

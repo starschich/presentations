@@ -1,0 +1,116 @@
+% =============================================================
+%  RAM Case Study — three-terminal hybrid HVDC interconnector
+%  Source: Meisingset et al., CIGRE 2026, Paper B4 PS1 11874
+%          (Statnett / Aker Solutions / RTE International).
+% =============================================================
+\sectionslide{Case Studies}{}
+\intermezzo{Three-terminal hybrid HVDC interconnector for offshore wind}{Meisingset et al., CIGRE 2026, Paper B4 PS1 11874}
+
+
+\begin{frame}{Study assumptions\\Scope \& method}
+  \begin{block}{Method}
+    Monte Carlo RAM analysis (1000 simulations) on Reliability Block Diagrams; energy availability (EA) based on \emph{available transmission capacity}.
+  \end{block}
+  \vspace{0.2em}
+  \begin{itemize}
+    \setlength{\itemsep}{0.35em}
+    \item VSC base cases: SMP, RBP and BIP+DMR
+    \item Half-bridge MMC with disconnectors only $\rightarrow$ No selective DC fault clearance.
+    \item Model boundary:\\
+    Offshore incl. 132\,kV GIS \& bays (excl. inter-array cables/turbines)\\
+    Onshore incl. 420\,kV feeder (busbar excluded).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Study assumptions\\Reliability data \& repair}
+  \begin{itemize}
+    \setlength{\itemsep}{0.35em}
+    \item \textbf{Converter:}
+      \begin{itemize}
+            \item Submodule spares 5-7
+            \item Submodule failure rate (1\%/yr)
+      \end{itemize}
+      \item \textbf{Transformer}
+      \begin{itemize}
+            \item No spare parts for offshore transformer (delivery time 3 years)
+            \item Offshore transformer MTBF 335\,y
+      \end{itemize}
+    \item \textbf{Scheduled maintenance (biennial):}
+    \begin{itemize}
+      \item SMP 6 days
+      \item RBP/BIP 3.5 days per pole $+$ 8\,h neutral\\(Maintenance on the neutral area requires full shutdown).
+    \end{itemize}
+      
+    \item \textbf{Outage on trip:} Onshore 2\,h
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Study assumptions\\Reliability data \& repair}
+  \begin{itemize}
+    \setlength{\itemsep}{0.35em}
+    \item \textbf{Cables MTTR:}
+      \begin{itemize}
+            \item Offshore cable: 75 d
+            \item Onshore cable: 24 d
+      \end{itemize}
+      \item \textbf{Failure rates}
+      \begin{itemize}
+            \setlength{\itemsep}{1em}
+            \item Bundled HVDC cable installation for SMP or RBIP:\qquad$0.01 \frac{\text{Failure}}{100km\cdot\text{Year}}$
+            \item Bundled HVDC cable installation for BIP with DMR:\qquad$0.01 \frac{\text{Failure}}{100km\cdot\text{Year}}$
+            \item Unbundled HVDC cable installation for BIP with DMR:\quad$0.005 \frac{\text{Failure}}{100km\cdot\text{Year}}$
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\newcommand{\dccfig}[1]{chapters/transmission-line/DC cable/figures/#1}
+\begin{frame}{Cable laying configurations}
+  Different cable laying options are availabel depending on the system configuration and requirements
+
+  \vspace{0.8em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Symmetrical monopole}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.1\textheight,keepaspectratio]{\dccfig{cable_laying_smp}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize SMP or RBIP configuration}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Bipole --- bundled}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.2\textheight,keepaspectratio]{\dccfig{cable_laying_bip_bundled}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize BIP with dedicated metalic return}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Bipole --- unbundled}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.45\textheight,keepaspectratio]{\dccfig{cable_laying_bip_unbundled}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize BIP with dedicated metalic return}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Results\\Interconnector}
+  \vspace{0.8em}
+  {\centering
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabular}{@{}l c c@{}}
+    \textbf{Configuration} & \textbf{EA [\%]} & \textbf{FOR} \\
+    \hline
+    Symmetrical monopole & 94.0 & 2.7 \\
+    Rigid bipole         & 94.4 & 5.0 \\
+    Bipole with DMR & 95.9 & 0.1 / 4.9$^{*}$ \\
+    \hline
+  \end{tabular}\par}
+  \vspace{0.8em}
+  {\color{atGray}\footnotesize $^{*}$Bipole with DMR forced outage rate is split into full-trip (100\% loss) / half-capacity (50\% loss) events.}
+\end{frame}

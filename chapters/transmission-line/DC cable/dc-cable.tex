@@ -1,0 +1,43 @@
+% =============================================================
+%  Transmission line — DC cable laying configurations
+%  Figures in ./figures (relative to project root; note the space
+%  in the folder name "DC cable").
+% =============================================================
+\newcommand{\dccfig}[1]{chapters/transmission-line/DC cable/figures/#1}
+
+\intermezzo{DC cable}{Cable laying configurations}
+
+\begin{frame}{Cable laying configurations}
+  Different cable laying options are availabel depending on the system configuration and requirements
+
+  \vspace{0.8em}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Symmetrical monopole}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.1\textheight,keepaspectratio]{\dccfig{cable_laying_smp}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize SMP or RBIP configuration}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Bipole --- bundled}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.2\textheight,keepaspectratio]{\dccfig{cable_laying_bip_bundled}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize BIP with dedicated metalic return}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{Bipole --- unbundled}\\[0.4em]
+      \begin{minipage}[c][0.45\textheight][c]{\linewidth}
+        \centering
+        \topoimg[width=\linewidth,height=0.45\textheight,keepaspectratio]{\dccfig{cable_laying_bip_unbundled}}
+      \end{minipage}\\[0.4em]
+      {\footnotesize BIP with dedicated metalic return}
+    \end{column}
+  \end{columns}
+\end{frame}
