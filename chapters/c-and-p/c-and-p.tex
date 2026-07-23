@@ -1,0 +1,373 @@
+% =============================================================
+%  Chapter — Control & Protection (Module 10)
+%  Figures in ./fig  (EMF converted to cropped PDF, PNG copied).
+% =============================================================
+\newcommand{\cpfig}[1]{chapters/c-and-p/fig/#1}
+
+\sectionslide{Control \& Protection}{Converter control and dynamic behaviour}
+
+\begin{frame}{What can a converter control?}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \textbf{Control values of the fast control loop:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item DC voltage
+        \item DC current
+        \item AC current
+          \begin{itemize}
+            \item Positive-phase active current $i_{p,psf}$
+            \item Positive-phase reactive current $i_{q,psf}$
+            \item Negative-phase active current $i_{p,nsf}$
+            \item Negative-phase reactive current $i_{q,nsf}$
+          \end{itemize}
+        \item AC voltage
+        \item AC frequency
+        \item Converter energy
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image4}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Energy flow}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.5em}
+        \item The converter has only limited energy storage, so in steady
+              state the converter energy must be balanced over one period.
+        \item Energy balancing can be done through the AC side or through
+              the DC side.
+        \item One side defines the power flow, the other is responsible for
+              the balancing.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.32\textheight,keepaspectratio]{\cpfig{image5}}\\[0.6em]
+      \topoimg[width=\linewidth,height=0.32\textheight,keepaspectratio]{\cpfig{image6}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Basic control principle of the HVDC converter}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+      \textbf{Three major control loops:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item AC loop
+        \item DC loop
+        \item Inner loop
+      \end{itemize}
+      \vspace{0.5em}
+      \textbf{Impedances of the control loop:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.2em}
+        \item AC converter impedance
+        \item DC converter impedance
+        \item AC grid impedance
+        \item DC line impedance
+        \item Converter internal impedance
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.68\textheight,keepaspectratio]{\cpfig{image7}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{AC current control}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+      \textbf{Control input / reference:} $\omega_{conv}$, $i_p$\,/\,$P$\\[0.4em]
+      \textbf{Control output:} $U_{dc}$
+      \vspace{0.6em}
+
+      \textbf{Scenario}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item AC power is defined by the operator.
+        \item DC voltage controls the power flow on the DC side to balance
+              the converter energy.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image8}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{AC voltage control}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+      \textbf{Control input / reference:} $\omega_{conv}$, $U_{AC}$, $f_{AC}$\\[0.4em]
+      \textbf{Control output:} $U_{dc}$
+      \vspace{0.6em}
+
+      \textbf{Scenario}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item AC power is defined by the AC load.
+        \item DC voltage controls the power flow on the DC side to balance
+              the converter energy.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image9}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{DC voltage control}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+      \textbf{Control input / reference:} $\omega_{conv}$, $U_{DC}$\\[0.4em]
+      \textbf{Control output:} $i_p$
+      \vspace{0.6em}
+
+      \textbf{Scenario}
+      \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item The station defines the voltage on the DC line.
+        \item AC current (and therefore AC power) balances the converter
+              energy.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image10}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Reactive power control}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.5em}
+        \item In control modes without AC voltage and frequency control, the
+              reactive power can be controlled independently of the energy
+              balancing.
+        \item Reactive power does not require DC power flow and can operate
+              without the DC line connected.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image8}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{AC control - Current source vs. Voltage source}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.52\textwidth}
+      \centering
+      \textbf{AC current source}\par
+      \vspace{1em}
+      \topoimg[width=\linewidth,height=0.5\textheight,keepaspectratio]{\cpfig{image12}}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \textbf{AC voltage source}\par
+      \vspace{1em}
+      \topoimg[width=\linewidth,height=0.5\textheight,keepaspectratio]{\cpfig{image11}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{AC control - Current source vs. Voltage source}
+  \centering
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{@{}p{5.6cm} p{4cm} p{3.5cm}@{}}
+     & \textbf{AC current source} & \textbf{AC voltage source} \\
+    \hline
+     & Grid Following (GFL)\newline P/Q control mode & V/f or \newline Grid Forming (GFM) \\
+    \textbf{Primary control parameters}   & Active current\newline Reactive current & AC frequency\newline AC voltage \\
+    \textbf{Secondary control parameters} & Active power\newline Reactive power\newline AC voltage & \\
+    \textbf{Grid application}             & SCL $\ge 2$ & SCL $<2$ \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Grid-forming control concept}
+  \centering
+  \topoimg[width=\linewidth,height=0.72\textheight,keepaspectratio]{\cpfig{image13}}\\[0.3em]
+  {\color{atGray}\footnotesize Grid-forming converters - advantages of grid-forming control in HVDC and FACTS applications\\
+  (white paper, Siemens Energy).}
+\end{frame}
+
+\begin{frame}{Steady-state power transmission}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item One station controls DC voltage.
+        \item One station controls active power.
+        \item Two active-power control modes are possible:
+          \begin{itemize}
+            \item P/Q control mode
+            \item U/f control mode
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.32\textheight,keepaspectratio]{\cpfig{image14}}\\[0.6em]
+      \topoimg[width=\linewidth,height=0.32\textheight,keepaspectratio]{\cpfig{image15}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Steady-state control principle}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{Standard operation}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item The station that sees the highest DC voltage controls the DC voltage.
+        \item Active power can be defined at any station.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \topoimg[width=0.9\linewidth,height=0.28\textheight,keepaspectratio]{\cpfig{image17}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Steady-state control principle}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{Wind-farm connection}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item Rectifier receives power coming from the WTG.
+        \item Inverter must consider the DC line voltage drop.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \topoimg[width=0.9\linewidth,height=0.28\textheight,keepaspectratio]{\cpfig{image18}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Steady-state control principle}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \textbf{Power supply to islanded network}
+      \begin{itemize}
+        \setlength{\itemsep}{0.25em}
+        \item Inverter provides power required by the loads
+        \item Rectifier controls DC voltage by providing the required active power to the DC side
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \topoimg[width=0.9\linewidth,height=0.28\textheight,keepaspectratio]{\cpfig{image19}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Dynamic analysis}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \setlength{\itemsep}{0.4em}
+        \item Dynamic analysis covers converter behaviour during AC grid
+              faults (on the network side of the converter transformer).
+        \item AC grid faults are very common, so the converter must stay
+              connected and provide supporting functions.
+      \end{itemize}
+      \vspace{0.3em}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image20}}
+      {\color{atGray}\footnotesize CIGR\'E TB 832}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Dynamic analysis: 3ph-to-GND at the inverter}
+  \centering
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image21}}\end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image22}}\end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image23}}\end{column}
+  \end{columns}
+  \vspace{0.3em}
+  {\color{atGray}\footnotesize CIGR\'E TB 832}
+\end{frame}
+
+\begin{frame}{Dynamic analysis: 3ph-to-GND at the rectifier}
+  \centering
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image24}}\end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image25}}\end{column}
+    \begin{column}{0.32\textwidth}\centering
+      \topoimg[width=\linewidth,height=0.8\textheight,keepaspectratio]{\cpfig{image26}}\end{column}
+  \end{columns}
+  \vspace{0.3em}
+  {\color{atGray}\footnotesize CIGR\'E TB 832.}
+\end{frame}
+
+\begin{frame}{Control hierarchy}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image27}}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image28}}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  \centering
+  {\color{atGray}\footnotesize CLC/TS 50654-1:2020 - HVDC control}
+\end{frame}
+
+\begin{frame}{Control requirements}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.42\textwidth}
+      \textbf{Input parameters for the control:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.2em}
+        \item Voltage measurement
+        \item Current measurement
+      \end{itemize}
+      \vspace{0.4em}
+      \textbf{Control functions:}
+      \begin{itemize}
+        \setlength{\itemsep}{0.2em}
+        \item Current control
+        \item Voltage control
+        \item Reference voltage generation for six voltage sources
+        \item Voltage synthesis by generating switching pulses for individual
+              modules
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.58\textwidth}
+      \centering
+      \topoimg[width=\linewidth,height=0.66\textheight,keepaspectratio]{\cpfig{image29}}
+    \end{column}
+  \end{columns}
+\end{frame}
